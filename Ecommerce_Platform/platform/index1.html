@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Platform</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our E-Commerce Platform</h1>
+        <nav>
+            <button id="loginButton" onclick="showLoginPage()" class="log">Login</button>
+            <button id="logoutButton" onclick="logout()" class="log" style="display:none;">Logout</button>
+            <button onclick="showLandingPage()">Products</button>
+            <button onclick="showCartPage()">Cart</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="loginFormContainer" class="page">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="login(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div id="landingPage" class="page" style="display:none;">
+            <h2>Products</h2>
+            <select id="categorySelect" onchange="filterProducts()">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="home_appliances">Home Appliances</option>
+                <option value="books">Books</option>
+            </select>
+            <table id="productsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Products will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="cartPage" class="page" style="display:none;">
+            <h2>Cart</h2>
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart items will be dynamically inserted here -->
+                </tbody>
+            </table>
+            <button onclick="buy()">Buy</button>
+        </div>
+
+        <div id="receiptPage" class="page" style="display:none;">
+            <div id="receiptContent">
+                <!-- Receipt content will be dynamically inserted here -->
+            </div>
+            <button onclick="printReceipt()">Print Receipt</button>
+        </div>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+</html>

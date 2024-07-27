@@ -1,0 +1,166 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, table, th, td, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full width and height setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dbffbb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #ffdada;
+    color: rgb(69, 69, 69);
+    padding: 20px;
+    text-align: center;
+    height: 150px;
+}
+
+header h1{
+    margin-top: 20px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav button {
+    background-color: #5d6dff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    width: fit-content;
+    transition: 0.5s;
+    margin-top: 2px;
+}
+
+nav button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.page {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px;
+    margin-left: 380px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input[type="email"], input[type="password"], button {
+    width: 100%;
+    margin: 10px 0;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #5d6dff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgb(201,201,201);
+    color: black;
+}
+
+select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #06a809;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}
+
+.cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.pro{
+    width: 95%;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.rec{
+    margin-top: 20px;
+}
